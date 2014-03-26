@@ -21,6 +21,10 @@
 		F75CC66D18E24AB200E77D5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75CC64F18E24AB200E77D5F /* UIKit.framework */; };
 		F75CC67518E24AB200E77D5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F75CC67318E24AB200E77D5F /* InfoPlist.strings */; };
 		F75CC67718E24AB200E77D5F /* TrackerAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F75CC67618E24AB200E77D5F /* TrackerAppTests.m */; };
+		F75CC68518E24C8700E77D5F /* WaypointCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F75CC68418E24C8700E77D5F /* WaypointCreationViewController.m */; };
+		F75CC68818E24DAB00E77D5F /* Waypoint.m in Sources */ = {isa = PBXBuildFile; fileRef = F75CC68718E24DAB00E77D5F /* Waypoint.m */; };
+		F75CC68C18E252A600E77D5F /* WaypointManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F75CC68B18E252A600E77D5F /* WaypointManager.m */; };
+		F75CC68F18E2551D00E77D5F /* WaypointsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F75CC68E18E2551D00E77D5F /* WaypointsMapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 		F75CC67218E24AB200E77D5F /* TrackerAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TrackerAppTests-Info.plist"; sourceTree = "<group>"; };
 		F75CC67418E24AB200E77D5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F75CC67618E24AB200E77D5F /* TrackerAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackerAppTests.m; sourceTree = "<group>"; };
+		F75CC68318E24C8700E77D5F /* WaypointCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaypointCreationViewController.h; sourceTree = "<group>"; };
+		F75CC68418E24C8700E77D5F /* WaypointCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaypointCreationViewController.m; sourceTree = "<group>"; };
+		F75CC68618E24DAB00E77D5F /* Waypoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Waypoint.h; sourceTree = "<group>"; };
+		F75CC68718E24DAB00E77D5F /* Waypoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Waypoint.m; sourceTree = "<group>"; };
+		F75CC68A18E252A600E77D5F /* WaypointManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaypointManager.h; sourceTree = "<group>"; };
+		F75CC68B18E252A600E77D5F /* WaypointManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaypointManager.m; sourceTree = "<group>"; };
+		F75CC68D18E2551D00E77D5F /* WaypointsMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaypointsMapViewController.h; sourceTree = "<group>"; };
+		F75CC68E18E2551D00E77D5F /* WaypointsMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaypointsMapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +94,7 @@
 		F75CC63F18E24AB200E77D5F = {
 			isa = PBXGroup;
 			children = (
+				F75CC65D18E24AB200E77D5F /* Main.storyboard */,
 				F75CC65118E24AB200E77D5F /* TrackerApp */,
 				F75CC67018E24AB200E77D5F /* TrackerAppTests */,
 				F75CC64A18E24AB200E77D5F /* Frameworks */,
@@ -112,11 +125,12 @@
 		F75CC65118E24AB200E77D5F /* TrackerApp */ = {
 			isa = PBXGroup;
 			children = (
+				F75CC68918E2529400E77D5F /* Utilities */,
 				F75CC65A18E24AB200E77D5F /* AppDelegate.h */,
 				F75CC65B18E24AB200E77D5F /* AppDelegate.m */,
-				F75CC65D18E24AB200E77D5F /* Main.storyboard */,
-				F75CC66018E24AB200E77D5F /* ViewController.h */,
-				F75CC66118E24AB200E77D5F /* ViewController.m */,
+				F75CC68218E24AD900E77D5F /* Controller */,
+				F75CC68118E24AD300E77D5F /* View */,
+				F75CC68018E24ACE00E77D5F /* Model */,
 				F75CC66318E24AB200E77D5F /* Images.xcassets */,
 				F75CC65218E24AB200E77D5F /* Supporting Files */,
 			);
@@ -150,6 +164,44 @@
 				F75CC67318E24AB200E77D5F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F75CC68018E24ACE00E77D5F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F75CC68618E24DAB00E77D5F /* Waypoint.h */,
+				F75CC68718E24DAB00E77D5F /* Waypoint.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F75CC68118E24AD300E77D5F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F75CC68218E24AD900E77D5F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F75CC66018E24AB200E77D5F /* ViewController.h */,
+				F75CC66118E24AB200E77D5F /* ViewController.m */,
+				F75CC68318E24C8700E77D5F /* WaypointCreationViewController.h */,
+				F75CC68418E24C8700E77D5F /* WaypointCreationViewController.m */,
+				F75CC68D18E2551D00E77D5F /* WaypointsMapViewController.h */,
+				F75CC68E18E2551D00E77D5F /* WaypointsMapViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F75CC68918E2529400E77D5F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F75CC68A18E252A600E77D5F /* WaypointManager.h */,
+				F75CC68B18E252A600E77D5F /* WaypointManager.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,8 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F75CC68518E24C8700E77D5F /* WaypointCreationViewController.m in Sources */,
+				F75CC68818E24DAB00E77D5F /* Waypoint.m in Sources */,
+				F75CC68C18E252A600E77D5F /* WaypointManager.m in Sources */,
 				F75CC66218E24AB200E77D5F /* ViewController.m in Sources */,
 				F75CC65C18E24AB200E77D5F /* AppDelegate.m in Sources */,
+				F75CC68F18E2551D00E77D5F /* WaypointsMapViewController.m in Sources */,
 				F75CC65818E24AB200E77D5F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +344,7 @@
 				F75CC65E18E24AB200E77D5F /* Base */,
 			);
 			name = Main.storyboard;
+			path = TrackerApp;
 			sourceTree = "<group>";
 		};
 		F75CC67318E24AB200E77D5F /* InfoPlist.strings */ = {
